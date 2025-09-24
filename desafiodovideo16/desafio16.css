@@ -1,0 +1,9 @@
+@font-face {
+    font: optional;
+    src: url('._idroid.otf') format('apentype');
+    font-weight: normal;
+    font-style: normal;
+}
+p, h1,h2{
+    font-family: 'optional';
+}
