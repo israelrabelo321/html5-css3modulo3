@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+    <style>
+        /* A diferença de th e td é: th -- referente a palavras frases. Agora o td é referente a dados. */
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            width: 500px;
+            border-collapse: collapse;
+            /* Tem que ter isso para o cabeçalho: */ position: relative;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+
+        }
+        thead, tfoot{
+            background-color: darkgray; 
+            color: white;
+        }
+        caption{
+            background-color: darkgrey;
+            padding: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+
+        }
+        td#numero{
+            text-align: right;
+        }
+        /* Aula 6 zebrado efeito */
+        tbody > tr:nth-child(2n){ /*Essa pseudo classe pula linhas, essa por exemplo pula duas.Se quiser só as imapas odd e se quiser as pares even*/
+            background-color: lightgray;
+            font-weight: bold;
+        }
+        /* ------------------------ */
+        /* Aula 7 cabeçalho*/
+        thead > tr > th{
+            position: sticky;
+            top: 0;
+            /* Esses dois com mais o position relative no table já faz ter cabeçalho fixo em tabelas grandes */
+            background-color: #383838;
+        }
+        /*-------------------- */
+    </style>
+</head>
+<body>
+     <h1>Uso de tabelas grandes</h1>
+    <caption>Numero de população em cada estado.</caption>
+   
+    <!-- ANATOMIA PARA TABELAS GRANDES
+     TABLE
+        THEAD
+            TR,TD,TH
+        TBODY
+            TR,TD,TH
+        TFOOT
+            TR,TD,TH
+    -->
+    
+    <table>
+        <tbody>
+            <thead>
+                <tr>
+                    <th scope="col"> Estado</th>
+                    <th scope="col" style="width: 50px;"> População</th>
+                </tr>
+            </thead>
+        </tbody>
+
+        <tbody>
+            <tr>
+                <td >São Paulo</td>
+                <td id="numero">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas gerais </td>
+                <td id="numero">2245</td>
+            </tr>
+
+            <tr>
+                <td>Rio de janeiro</td>
+                <td id="numero">234432q35</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td id="numero">13423435</td>
+            </tr>
+            <!-- É só fazer todos os outros paises aqui!!!! -->
+        </tbody>
+
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total de habitantes</th>
+                <td><strong>00000</strong></td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, aliquam excepturi. Inventore minima corrupti corporis adipisci? Sint eligendi minus distinctio doloribus saepe! Molestiae ducimus et non similique eveniet consequuntur qui.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, minima necessitatibus! Eligendi ex odio molestiae eaque nemo deserunt ipsum libero cumque, adipisci iste impedit inventore enim cupiditate pariatur in beatae?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores deleniti, adipisci debitis, veritatis atque fuga velit iste sit voluptates molestiae vel corrupti esse expedita earum saepe, eius consectetur dolorum quis.</p>
+</body>
+</html>
