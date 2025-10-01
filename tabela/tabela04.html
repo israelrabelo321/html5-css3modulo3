@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela completa</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+           
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+        }
+        caption{
+            font-size: 1em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Filmes favoritos</caption>
+        <thead>
+            <tr>
+                <!-- O scope ="col"pega só uma coluna , mas o scope="colgroup"pega mais de uma coluna.O row é para pegar linha e rowgroup é para pegar grupo de linha. -->
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <!-- Tenho noção de linha e coluna. -->
+                <th colspan="4" scope="row">Total</th>
+                <td>0000</td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <!-- Assim que cresce para baixo e cima: rowspan -->
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulheres</td>
+                <td>Ana Maria Santos</th>
+                <td>Alien</th>
+                <td>Rambo</th>
+                <td>Vingadores</th>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Claudia Melo</td>
+                <td>Oblivian</td>
+                <td>Matrix</td>
+                <td>Big Hero</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno Mendonça</td>
+                <td>Intocaveis</td>
+                <td>Amnésia</td>
+                <td>Gadiador</td>
+            </tr>
+            <tr>
+                
+                <td>Daniel Lorenço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>Dangel</td>
+            </tr>
+            <tr>
+                
+                <td>Fabiano Mota</td>
+                <td>Star</td>
+                <td>Taxi driver</td>
+                <td>Toy story</td>
+            </tr>
+
+            <!-- ------------------------------------ -->
+        </tbody>
+    </table>
+</body>
+</html>
